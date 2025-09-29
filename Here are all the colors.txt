@@ -1,0 +1,84 @@
+:root {
+  /* ================= Primary Theme Colors ================= */
+  --casino-gold: #FFD700;
+  --casino-red: #DC2626;
+  --casino-green: #059669;
+
+  /* ================= Background Colors ================= */
+  --bg-main: linear-gradient(to right, #111827, #4c1d95, #111827); /* gray-900 via purple-900 to gray-900 */
+  --bg-card: rgba(17, 24, 39, 0.7); /* gray-900/70 */
+  --bg-sidebar: rgba(17, 24, 39, 0.95); /* gray-900/95 */
+  --bg-menu-item-1: rgba(107, 33, 168, 0.5); /* purple-800/50 */
+  --bg-menu-item-2: rgba(88, 28, 135, 0.5); /* purple-900/50 */
+  --bg-menu-item-3: rgba(88, 28, 135, 0.3); /* purple-900/30 */
+
+  /* ================= Game-Specific Colors ================= */
+  /* Rock Paper Scissors */
+  --rps-gradient: linear-gradient(to right, #ef4444, #b91c1c); /* red-500 → red-700 */
+  --rps-btn: #ef4444; /* red-500 */
+  --rps-btn-hover: #f87171; /* red-400 */
+  --rps-btn-active: #dc2626; /* red-600 */
+
+  /* Coin Flip */
+  --coin-gradient: linear-gradient(to right, #eab308, #a16207); /* yellow-500 → yellow-700 */
+  --coin-yellow: #facc15; /* yellow-400 */
+  --coin-dark: #1f2937; /* gray-800 */
+
+  /* 7 Up 7 Down */
+  --sevenup-gradient: linear-gradient(to right, #22c55e, #15803d); /* green-500 → green-700 */
+  --sevenup-red: #ef4444;   /* red-500 */
+  --sevenup-yellow: #eab308; /* yellow-500 */
+  --sevenup-green: #22c55e; /* green-500 */
+
+  /* Tic Tac Toe */
+  --ttt-gradient: linear-gradient(to right, #a855f7, #7e22ce); /* purple-500 → purple-700 */
+  --ttt-x: #2563eb; /* blue-600 */
+  --ttt-o: #dc2626; /* red-600 */
+
+  /* ================= UI Element Colors ================= */
+  /* Text */
+  --text-primary: #ffffff;
+  --text-secondary-1: #d1d5db; /* gray-300 */
+  --text-secondary-2: #9ca3af; /* gray-400 */
+  --text-secondary-3: #6b7280; /* gray-500 */
+  --text-accent-1: #facc15; /* yellow-400 */
+  --text-accent-2: #eab308; /* yellow-500 */
+  --text-accent-3: #ca8a04; /* yellow-600 */
+  --text-success-1: #4ade80; /* green-400 */
+  --text-success-2: #22c55e; /* green-500 */
+  --text-error-1: #f87171; /* red-400 */
+  --text-error-2: #ef4444; /* red-500 */
+
+  /* Borders */
+  --border-primary-1: rgba(126, 34, 206, 0.5); /* purple-700/50 */
+  --border-primary-2: rgba(88, 28, 135, 0.5); /* purple-800/50 */
+  --border-hover: rgba(168, 85, 247, 0.7); /* purple-500/70 */
+  --border-card-1: #e5e7eb; /* gray-200 */
+  --border-card-2: #d1d5db; /* gray-300 */
+
+  /* Buttons */
+  --btn-primary: linear-gradient(to right, #eab308, #ca8a04); /* yellow-500 → yellow-600 */
+  --btn-secondary-1: #374151; /* gray-700 */
+  --btn-secondary-2: #4b5563; /* gray-600 */
+  --btn-success: linear-gradient(to right, #22c55e, #15803d); /* green-500 → green-700 */
+  --btn-info: linear-gradient(to right, #3b82f6, #1d4ed8); /* blue-500 → blue-700 */
+  --btn-profile: linear-gradient(to right, #9333ea, #db2777); /* purple-600 → pink-600 */
+
+  /* ================= Status Colors ================= */
+  --status-win-1: #4ade80; /* green-400 */
+  --status-win-2: #22c55e; /* green-500 */
+  --status-win-3: #16a34a; /* green-600 */
+  --status-lose-1: #f87171; /* red-400 */
+  --status-lose-2: #ef4444; /* red-500 */
+  --status-lose-3: #dc2626; /* red-600 */
+  --status-tie-1: #facc15; /* yellow-400 */
+  --status-tie-2: #eab308; /* yellow-500 */
+  --status-coin: #facc15; /* yellow-400 (consistent coin color) */
+
+  /* ================= Hover & Interactive ================= */
+  --hover-yellow: #facc15; /* hover:from-yellow-400 */
+  --hover-scale: scale(1.05); /* hover:scale-105 */
+  --opacity-50: 0.5;
+  --opacity-70: 0.7;
+  --opacity-95: 0.95;
+}

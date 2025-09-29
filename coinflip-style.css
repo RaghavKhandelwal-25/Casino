@@ -1,0 +1,142 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: border-box; 
+}
+
+.all-content{
+    background: linear-gradient(to bottom right, #111827, #581c87, #111827);
+    /* width: 50%; */
+    height: 100vh;
+}
+
+.navbar{
+    height: 60px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    text-align: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFD700;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.game-area{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 90%;
+    height: 500px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#H1{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+    padding: 20px;
+}
+
+.games{
+    display: flex;
+    justify-content: center;
+}
+
+.buttons{
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    background-color: #FFD700;
+    border: none;
+    margin-top: 25px;
+}
+
+.buttons:hover{
+    /* background-color: #581c87; */
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#H2{
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+    margin-top: 30px;
+}
+
+.H-T{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    height: 50px;
+    width: 220px;
+}
+
+.btn{
+    padding: 8px;
+    height: 40px;
+    width: 100px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: grey;
+}
+
+.btn:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: white;
+    color: black;
+}
+
+.btn2{
+    padding: 8px;
+    height: 40px;
+    width: 110px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #7EE256;
+}
+
+#result{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+}
+
+.score{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 20px;
+}
