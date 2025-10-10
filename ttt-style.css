@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: border-box; 
+}
+
+.all-content{
+    background: linear-gradient(to bottom right, #111827, #581c87, #111827);
+    /* width: 50%; */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.navbar{
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
+    color: #FFD700;
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.game-area{
+    margin-top: 20px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 650px;
+    height: 600px;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.games{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 390px;
+    width: 390px ;
+    margin-top: 30px;
+}
+
+.buttons{
+    margin: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    height: 100px;
+    width: 100px;
+    background-color: black;
+    color: white;
+    font-size: 40px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* .buttons:hover{
+    background-color: #581c87;
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+} */
+
+#newGame{
+    padding: 8px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+    background-color: #22c55e;
+    color: white;
+}
+
+#newGame:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #16a34a;
+    border: 1px solid white;
+    color: white;
+}
+
+#winner{
+    font-size: 25px;
+    color: white;
+    margin-top: 15px;
+}
+
+.msg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}
+
+.hide{
+    display: none;
+}

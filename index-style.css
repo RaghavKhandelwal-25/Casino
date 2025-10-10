@@ -149,7 +149,7 @@
     margin-bottom: 5px;
     padding: 10px;
     color: white;
-    background:  #1a1933;
+    background:  rgba(17, 24, 39, 0.7);
 }
 
 .BOX:hover{
@@ -163,8 +163,7 @@ a{
     display: block;
     margin-top: 20px;
     width: 90%;
-    padding: 12px;
-    border-radius: 8%;
+    padding: 8px;
     border: none;
     text-align: center;
     text-decoration: none;

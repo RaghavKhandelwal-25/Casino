@@ -19,27 +19,31 @@
         <div id="title">Rock Paper Scissor</div>
         <div class="game-area">
             <div class="games">
-                <button class="buttons icons">
+                <button id="Rock" class="buttons icons">
                     <i class="fa-regular fa-hand-back-fist"></i>
                 </button>
-                <button class="buttons icons">
+                <button id="Paper" class="buttons icons">
                     <i class="fa-regular fa-hand"></i>
                 </button>
-                <button class="buttons icons">
+                <button id="Scissor" class="buttons icons">
                     <i class="fa-regular fa-hand-scissors"></i>
                 </button>
             </div>
-            <div id="result">Result</div>
-            <div class="score">
-                <div>User</div>
-                <div>Computer</div>
-        </div>
-        </div>
-        <footer>
+            <div id="choice">Your Choice:</div>
+            <button id="challenge">Challenge Computer!</button>
 
-        </footer>
+            <div class="result">
+                <div class="score">
+                    <p id="user-score">0</p>
+                    <p>You</p>
+                </div>
+                <div class="score">
+                    <p id="comp-score">0</p>
+                    <p>Comp</p>
+                </div>
+            </div>
     </div>
-
+    <script src="rps.js"></script>
 </body>
 
 </html>

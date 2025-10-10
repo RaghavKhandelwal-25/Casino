@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="index-style.css">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
                 <div id="casino">CASINO</div>
                 <div id="balance">
                     <i class="fa-solid fa-money-bill-1"></i>
-                    <div>Balance</div>
+                    <p>1000</p>
                 </div>
                 <div id="profile">
                     <i class="fa-solid fa-user"></i>
@@ -54,7 +54,7 @@
 
         <div class="middle2">
             <div class="box1 BOX">
-                <div style="background-color: #DC2626;" class="box-img">
+                <div style="background: linear-gradient(to right, #ef4444, #b91c1c);" class="box-img">
                     <i class="fa-solid fa-scissors"></i>
                 </div>
                 <h2>Rock Paper Scissor</h2>
@@ -64,12 +64,12 @@
                     <i class="fa-solid fa-money-bill-1"></i>
                     <div>300</div>
                 </div>
-                <a href="rps.html" style="background-color: #DC2626;">Play Now</a>
+                <a href="rps.html" id="rpc-entry" style="background: linear-gradient(to right, #ef4444, #b91c1c);">Play Now</a>
                 <p class="win">Win: 600 coins</p>
             </div>
 
             <div class="box2 BOX">
-                <div style="background-color: #ffda06;" class="box-img">
+                <div style="background: linear-gradient(to right, #eab308, #a16207);" class="box-img">
                     <i class="fa-solid fa-coins"></i>
                 </div>
                 <h2>Coin Flip</h2>
@@ -79,12 +79,12 @@
                     <i class="fa-solid fa-money-bill-1"></i>
                     <div>100</div>
                 </div>
-                <a href="coinflip.html" style="background-color: #ffda06;">Play Now</a>
+                <a href="coinflip.html" id="CF-entry" style="background: linear-gradient(to right, #eab308, #a16207);">Play Now</a>
                 <p class="win">Win: 200 coins</p>
             </div>
 
             <div class="box3 BOX">
-                <div style="background-color: #059669;" class="box-img">
+                <div style="background: linear-gradient(to right, #22c55e, #15803d);" class="box-img">
                     <i class="fa-solid fa-table-cells"></i>
                 </div>
                 <h2>Tic Tac Toe</h2>
@@ -94,12 +94,12 @@
                     <i class="fa-solid fa-money-bill-1"></i>
                     <div>500</div>
                 </div>
-                <a href="ttt.html" style="background-color: #059669">Play Now</a>
+                <a href="ttt.html" id="TTT-entry" style="background: linear-gradient(to right, #22c55e, #15803d);">Play Now</a>
                 <p class="win">Win: 1000 coins</p>
             </div>
 
             <div class="box4 BOX">
-                <div style="background-color: rgb(245, 72, 245);" class="box-img">
+                <div style="background: linear-gradient(to right, #a855f7, #7e22ce);" class="box-img">
                     <i class="fa-solid fa-dice"></i>
                 </div>
                 <h2>7 Up 7 Down</h2>
@@ -107,9 +107,9 @@
                 <p class="box-line1">Entry Cost</p>
                 <div class="amount">
                     <i class="fa-solid fa-money-bill-1"></i>
-                    <div>300</div>
+                    <div>200</div>
                 </div>
-                <a href="7up.html" style="background-color: rgb(245, 72, 245);">Play Now</a>
+                <a href="7up.html" id="7up-entry" style="background: linear-gradient(to right, #a855f7, #7e22ce);;">Play Now</a>
                 <p class="win">Win: 400 coins</p>
             </div>
         </div>
@@ -123,6 +123,7 @@
             </div>
         </footer>
     </div>
+    <script src="index.js"></script>
 </body>
 
 </html>

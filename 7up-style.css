@@ -53,23 +53,16 @@
 
 .games{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    width: 220px;
 }
 
 .buttons{
-    height: 130px;
-    width: 130px;
-    border-radius: 50%;
-    background-color: #FFD700;
-    border: none;
-    margin-top: 25px;
-}
-
-.buttons:hover{
-    /* background-color: #581c87; */
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: 0.3s;
+    height: 100px;
+    width: 100px;
+    border-radius: 8px;
+    background-color: grey;
+    border: 1px solid white;
 }
 
 .icons{
@@ -89,19 +82,26 @@
     margin-top: 30px;
 }
 
+#H3{
+    text-align: center;
+    color: white;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
 .H-T{
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
     height: 50px;
-    width: 220px;
+    width: 470px;
 }
 
 .btn{
     padding: 8px;
     height: 40px;
-    width: 100px;
+    width: 140px;
     border: none;
     border-radius: 10px;
     font-weight: bold;
@@ -110,6 +110,7 @@
 
 .btn:hover{
     cursor: pointer;
+    transform: scale(1.1);
     transition: 0.3s;
     background-color: white;
     color: black;
