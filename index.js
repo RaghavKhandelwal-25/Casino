@@ -2,7 +2,8 @@ let balanceDisplay = document.querySelector('#mainBalance');
 let G1Entry = document.querySelector('#rpc-entry');
 let G2Entry = document.querySelector('#CF-entry');
 let G3Entry = document.querySelector('#TTT-entry');
-let G4Entry = document.querySelector('#entry7up-entry');
+let G4Entry = document.querySelector('#entry7up');
+// let saviorBtn=document.querySelector('#savior');
 
 let balance=parseInt(localStorage.getItem('balance')) || 1000; //saving balance in local storage
 //parseInt() to turn string number(1000) into a number integer
@@ -57,3 +58,7 @@ G4Entry.addEventListener('click', (e) => {
     window.location.href = '7up.html';
     }
 });
+
+// saviorBtn.addEventListener('click',()=>{
+//     updateBalance(1000);
+// });

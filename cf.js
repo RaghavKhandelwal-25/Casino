@@ -4,21 +4,15 @@ let win=document.querySelector("#winner");
 let msgContainer = document.querySelector('.msg-container');
 let playAgain = document.querySelector('#newGame');
 let coin=document.querySelector('.button');
-let balance = parseInt(localStorage.getItem('balance')) || 200;
+let balance = parseInt(localStorage.getItem('balance')) || 0;
 let balanceDisplay = document.querySelector('#mainBalance');
 
 balanceDisplay.innerText = balance;
 
-function credit(amount) {
-  balance += amount;
-  localStorage.setItem('balance', balance);
-  document.querySelector('#balance-display').innerText = balance;
-}
-
-function debit(amount) {
-  balance -= amount;
-  localStorage.setItem('balance', balance);
-  document.querySelector('#balance-display').innerText = balance;
+function updateBalance(newBalance) {
+    balance = newBalance;
+    balanceDisplay.innerText = balance;
+    localStorage.setItem('balance', balance);
 }
 
 let userChoice=null;
@@ -26,8 +20,7 @@ let userChoice=null;
 btns.forEach(btn=>{
     btn.addEventListener("click",()=>{
         userChoice=btn.getAttribute("id");
-        console.log(`${userChoice} clicked`);
-        
+        console.log(`${userChoice} clicked`);  
     });
 });
 
@@ -50,7 +43,7 @@ let playGame=(userChoice , compChoice)=>{
         msgContainer.classList.remove("hide");
         win.innerText=`You Win! It's ${compChoice}`;
         win.style.background="linear-gradient(to right, #22c55e, #15803d)";
-        credit(200);
+        updateBalance(balance + 200);
     }
     else{
         msgContainer.classList.remove("hide");
@@ -89,5 +82,5 @@ playAgain.addEventListener('click',()=>{
     userChoice=null;
     coin.innerText="H";
     coin.classList.remove('spin');
-    debit(100);
+    updateBalance(balance-100);
 });

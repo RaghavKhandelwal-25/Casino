@@ -6,23 +6,17 @@ let roll=document.querySelector('.btn2');
 let newgame=document.querySelector('#playAgain');
 let winner=document.querySelector('#winner');
 let msgContainer = document.querySelector('.msg-container');    
-let balance = parseInt(localStorage.getItem('balance'))||1000;//only useful when there is no balance in local storage on home page
+let balance = parseInt(localStorage.getItem('balance'))|| 0;//only useful when there is no balance in local storage on home page
 let balanceDisplay = document.querySelector('#mainBalance');
 
 balanceDisplay.innerText=balance;//to sync balance on game page
 let sum=null;
 let userChoice=null;
 
-function credit(amount) {
-  balance += amount;
-  localStorage.setItem('balance', balance);
-  balanceDisplay.innerText = balance;
-}
-
-function debit(amount) {
-  balance -= amount;
-  localStorage.setItem('balance', balance);
-  balanceDisplay.innerText = balance;
+function updateBalance(newBalance) {
+    balance = newBalance;
+    balanceDisplay.innerText = balance;
+    localStorage.setItem('balance', balance);
 }
 
 choice.forEach(btn=>{
@@ -68,15 +62,15 @@ let winCondition=(num1,num2)=>{
     msgContainer.classList.remove("hide");
     if(userChoice==="Under 7" && (num1+num2+2)<7){
         winner.innerText="You Win! It's Under 7";
-        credit(400);
+        updateBalance(balance + 400);
     }
     else if(userChoice==="Exactly 7" && (num1+num2+2)===7){
         winner.innerText="You Win! It's Exactly 7";
-        credit(1000);
+        updateBalance(balance + 1000);
     }
     else if(userChoice==="over 7" && (num1+num2+2)>7){
         winner.innerText="You Win! It's Over 7";
-        credit(400);
+        updateBalance(balance + 400);
     }
     else{
         winner.innerText="You Lose!";
@@ -87,7 +81,7 @@ newgame.addEventListener('click',()=>{
     msgContainer.classList.add("hide");
     roll.disabled=false;
     choice.forEach(btn => btn.disabled = false);
-    debit(200);
+    updateBalance(balance - 200);
     userChoice=null;
     sum=null;
     d1.innerText=String.fromCodePoint(0x2680);
