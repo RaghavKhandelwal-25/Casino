@@ -9,7 +9,7 @@
     /* width: 50%; */
     margin-left: auto;
     margin-right: auto;
-    height: 100vh;
+    text-align: center;
 }
 
 .navbar{
@@ -17,8 +17,22 @@
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
     display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#balance{
+    
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 30px;
+    width: 70px;
+    border-radius: 13%;
+    color:  #FFD700;
+    background-color: rgba(88, 28, 135, 0.5);
+    margin-right: 20px;
 }
 
 #title{
@@ -32,22 +46,43 @@
     margin-top: 20px;
 }
 
+/* #line1{
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+}
+
+#line2{
+    color: white;
+    font-size: 20px;
+    padding: 5px;
+    margin-bottom: 10px;
+} */
+
 .game-area{
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.2);
     width: 90%;
-    height: 500px;
+    height: 600px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    margin-bottom: 10px;
+}
+
+#roundsCount{
+    color: white;
+    font-size: 40px;
+    padding: 15px;
+    font-weight:530;
 }
 
 .games{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    height: 230px;
+    height: 180px;
 }
 
 .buttons{
@@ -109,4 +144,36 @@
 #user-score, #comp-score{
     font-size: 40px;
     /* color: #FFD700; */
+}
+
+#playAgain{
+    padding: 8px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 30px;
+    background-color: #22c55e;
+    color: white;
+}
+
+#playAgain:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #16a34a;
+    border: 1px solid white;
+    color: white;
+}
+
+.msg-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.hide{
+    display: none;
 }

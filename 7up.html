@@ -5,55 +5,57 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="stylesheet" href="7up-style.css">
 </head>
 
 <body>
     <div class="all-content">
         <header class="navbar">
-            <div>7</div>
+        
+            <div id="balance">
+                    <i class="fa-solid fa-money-bill-1"></i>
+                    <p id="mainBalance">1000</p>
+                </div>
         </header>
         <div id="title">7 Up 7 Down</div>
         <div class="game-area">
             <div id="H1">Make Your Prediction</div>
             <div class="games">
-                <button class="buttons icons">
-                    H/T
-                </button>
-                <button class="buttons icons">
-                    H/T
-                </button>
+                <div id="dice1" class="buttons icons">
+                   &#9856;
+                </div>
+                <div id="dice2" class="buttons icons">
+                   &#9856; 
+                </div>
             </div>
-            <div id="H2">Total Score:</div>
             <div id="H3">What will the total be?</div>
             <div class="H-T">
-                <button class="btn">
+                <button id="Under 7" class="btn">
                     Under 7
                 </button>
-                <button class="btn">
+                <button id="Exactly 7" class="btn">
                     Exactly 7
                 </button>
-                <button class="btn">
+                <button id="over 7" class="btn">
                     Over 7
-                </button> 
+                </button>
             </div>
             <button class="btn2">
-                    Roll the Dice!
-                </button>       
-            <div id="result">Result</div>
-            <div class="score">
-                <div>Won</div>
-                <div>Loose</div>
+                Roll the Dice!
+            </button>
+            <div class="msg-container hide">
+                <div id="totalSum">Total Sum:</div>
+                <div id="winner">Winner:</div>
+                <button id="playAgain">Play Again</button>
+            </div>
         </div>
-        </div>
-        <footer>
 
-        </footer>
     </div>
-
+    <script src="7up.js"></script>
 </body>
 
 </html>

@@ -6,8 +6,6 @@
 
 .all-content{
     background: linear-gradient(to bottom right, #111827, #581c87, #111827);
-    /* width: 50%; */
-    height: 100vh;
 }
 
 .navbar{
@@ -15,8 +13,22 @@
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
     display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#balance{
+    
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 30px;
+    width: 70px;
+    border-radius: 13%;
+    color:  #FFD700;
+    background-color: rgba(88, 28, 135, 0.5);
+    margin-right: 20px;
 }
 
 #title{
@@ -38,10 +50,11 @@
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.2);
     width: 90%;
-    height: 500px;
+    height: 600px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 10px;
 }
 
 #H1{
@@ -55,6 +68,7 @@
     display: flex;
     justify-content: space-between;
     width: 220px;
+    gap: 30px;
 }
 
 .buttons{
@@ -70,11 +84,10 @@
     justify-content: center;
     align-items: center;
     color: black;
-    font-size: 30px;
-    font-weight: bold;
+    font-size: 80px;
 }
 
-#H2{
+#totalSum{
     text-align: center;
     color: white;
     font-size: 25px;
@@ -86,7 +99,8 @@
     text-align: center;
     color: white;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
+
 }
 
 .H-T{
@@ -106,6 +120,15 @@
     border-radius: 10px;
     font-weight: bold;
     background-color: grey;
+    margin-top: 20px;
+}
+
+.btn:focus{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+    background-color: white;
+    color: black;
 }
 
 .btn:hover{
@@ -123,7 +146,7 @@
     border: none;
     border-radius: 10px;
     font-weight: bold;
-    margin-top: 15px;
+    margin-top: 30px;
     background-color: #22c55e;
     color: white;
 }
@@ -136,16 +159,60 @@
     color: white;
 }
 
-#result{
+#playAgain{
+    padding: 8px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 10px;
+    background-color: #22c55e;
+    color: white;
+}
+
+#playAgain:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    background-color: #16a34a;
+    border: 1px solid white;
+    color: white;
+}
+
+@keyframes roll {
+  0%   { transform: rotate(0deg); }
+  25%  { transform: rotate(30deg) scale(1.1); }
+  50%  { transform: rotate(-30deg) scale(1.1); }
+  75%  { transform: rotate(15deg) scale(1.05); }
+  100% { transform: rotate(0deg) scale(1); }
+}
+
+.roll-animation {
+  animation: roll 0.8s ease-in-out;
+}
+
+
+#totalScore{
     text-align: center;
     color: white;
     font-size: 20px;
+    margin-top: 15px;
 }
 
-.score{
+#winner{
+    font-size: 25px;
+    color: white;
+    margin-top: 15px;
+}
+
+.msg-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
-    margin-top: 20px;
+    margin-top: 10px;
+}
+
+.hide{
+    display: none;
 }

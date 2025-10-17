@@ -2,6 +2,22 @@ let boxes = document.querySelectorAll('.buttons');//nine boxex can be thinked as
 let msgContainer = document.querySelector('.msg-container');
 let NewGame = document.querySelector('#newGame');
 let winpara = document.querySelector('#winner');
+let balance = parseInt(localStorage.getItem('balance')) || 200;
+let balanceDisplay = document.querySelector('#mainBalance');
+
+balanceDisplay.innerText = balance;
+
+function credit(amount) {
+  balance += amount;
+  localStorage.setItem('balance', balance);
+  document.querySelector('#balance-display').innerText = balance;
+}
+
+function debit(amount) {
+  balance -= amount;
+  localStorage.setItem('balance', balance);
+  document.querySelector('#balance-display').innerText = balance;
+}
 
 let turnX =true;//first chance is of X
 let count =0;
@@ -56,6 +72,7 @@ let showWinner=(winner)=>{
     msgContainer.classList.remove("hide");
     if(count!=9){
     winpara.innerText=`Congratulations! ${winner} is the Winner!`;
+    credit(1000);
     }
     else{
         winpara.innerText=`${winner}`;
@@ -74,5 +91,7 @@ NewGame.addEventListener('click',()=>{
         box.disabled=false;
         msgContainer.classList.add("hide");
         turnX=true;
+        count=0;
+        debit(500);
     });
 });

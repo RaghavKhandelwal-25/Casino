@@ -14,10 +14,16 @@
 <body>
     <div class="all-content">
         <header class="navbar">
-            <div>RPS</div>
+            <div id="balance">
+                    <i class="fa-solid fa-money-bill-1"></i>
+                    <p id="mainBalance">200</p>
+                </div>
         </header>
         <div id="title">Rock Paper Scissor</div>
+        <!-- <div id="line1">It's a 3 Round Game</div>
+            <div id="line2">First to win 2 rounds wins the game!</div> -->
         <div class="game-area">
+            <div id="roundsCount">Round 1</div>
             <div class="games">
                 <button id="Rock" class="buttons icons">
                     <i class="fa-regular fa-hand-back-fist"></i>
@@ -41,6 +47,10 @@
                     <p id="comp-score">0</p>
                     <p>Comp</p>
                 </div>
+            </div>
+
+            <div class="msg-container hide">
+                <button id="playAgain">Next Round</button>
             </div>
     </div>
     <script src="rps.js"></script>

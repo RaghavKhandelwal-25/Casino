@@ -14,39 +14,42 @@
 <body>
     <div class="all-content">
         <header class="navbar">
-            <div>CF</div>
+            
+            <div id="balance">
+                    <i class="fa-solid fa-money-bill-1"></i>
+                    <p id="mainBalance">200</p>
+                </div>
         </header>
         <div id="title">COINFLIP</div>
         <div class="game-area">
             <div id="H1">Make Your Choice</div>
             <div class="games">
-                <button class="buttons icons">
-                    H/T
+                <button class="button icons">
+                    H
                 </button>
             </div>
             <div id="H2">Choose your side:</div>
             <div class="H-T">
-                <button class="btn">
+                <button id="Head" class="btn">
                     Heads
                 </button>
-                <button class="btn">
+                <button id="Tail" class="btn">
                     Tails
                 </button> 
             </div>
             <button class="btn2">
                     Flip Coin
                 </button>       
-            <div id="result">Result</div>
-            <div class="score">
-                <div>Won</div>
-                <div>Loose</div>
-        </div>
+            <div class="msg-container hide">
+                <div id="winner">Winner:</div>
+                <button id="newGame">Play Again</button>
+            </div>
         </div>
         <footer>
 
         </footer>
     </div>
-
+<script src="cf.js"></script>
 </body>
 
 </html>

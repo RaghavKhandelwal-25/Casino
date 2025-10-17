@@ -7,7 +7,7 @@
 .all-content{
     background: linear-gradient(to bottom right, #111827, #581c87, #111827);
     /* width: 50%; */
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .navbar{
@@ -15,8 +15,22 @@
     background-color: rgba(0, 0, 0, 0.2);
     color: white;
     display: flex;
+    flex-direction: row-reverse;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+#balance{
+    
+    display: flex;
     justify-content: center;
     align-items: center;
+    height: 30px;
+    width: 70px;
+    border-radius: 13%;
+    color:  #FFD700;
+    background-color: rgba(88, 28, 135, 0.5);
+    margin-right: 20px;
 }
 
 #title{
@@ -37,11 +51,12 @@
     align-items: center;
     margin-top: 20px;
     background-color: rgba(0, 0, 0, 0.2);
-    width: 90%;
-    height: 500px;
+    width: 650px;
+    height: 600px;
     border-radius: 10px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 20px;
 }
 
 #H1{
@@ -56,29 +71,31 @@
     justify-content: center;
 }
 
-.buttons{
+.button{
     height: 130px;
     width: 130px;
     border-radius: 50%;
     background-color: #FFD700;
     border: none;
     margin-top: 25px;
-}
-
-.buttons:hover{
-    /* background-color: #581c87; */
-    cursor: pointer;
-    transform: scale(1.1);
-    transition: 0.3s;
-}
-
-.icons{
+    font-size: 40px;
+    font-weight: bold;
     display: flex;
     justify-content: center;
     align-items: center;
     color: black;
-    font-size: 30px;
-    font-weight: bold;
+    perspective: 1000px;
+    transition: transform 0.3s ease;
+}
+
+.spin {
+    animation: spinCoin 0.3s linear infinite;
+}
+
+@keyframes spinCoin {
+    0% { transform: rotateY(0deg); }
+    50% { transform: rotateY(180deg); }
+    100% { transform: rotateY(360deg); }
 }
 
 #H2{
@@ -111,6 +128,13 @@
 .btn:hover{
     cursor: pointer;
     transition: 0.3s;
+    border: 1px solid white;
+    color: white;
+}
+
+.btn:focus{
+    cursor: pointer;
+    transition: 0.3s;
     background-color: white;
     color: black;
 }
@@ -120,31 +144,60 @@
     height: 38px;
     width: 120px;
     border: none;
-    border-radius: 10px;
+    border-radius: 3px;
     font-weight: bold;
     margin-top: 15px;
-    background-color: #22c55e;
+    background: linear-gradient(to right, #a855f7, #7e22ce);
     color: white;
 }
 
 .btn2:hover{
     cursor: pointer;
     transition: 0.3s;
-    background-color: #16a34a;
+    background: linear-gradient(to right, #a855f7, #7e22ce);
     border: 1px solid white;
     color: white;
 }
 
-#result{
-    text-align: center;
-    color: white;
+#newGame{
+    padding: 8px;
+    width: 150px;
+    border: none;
+    border-radius: 3px;
+    font-weight: bold;
     font-size: 20px;
+    margin-top: 30px;
+    background: linear-gradient(to right, #a855f7, #7e22ce);
+    color: white;
 }
 
-.score{
+#newGame:hover{
+    cursor: pointer;
+    transition: 0.3s;
+    background: linear-gradient(to right, #a855f7, #7e22ce);
+    border: 1px solid white;
+    color: white;
+}
+
+#winner{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 8px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border-radius: 3px;
+    font-size: 25px;
+    color: white;
+    margin-top: 15px;
+}
+
+.msg-container{
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    color: white;
     margin-top: 20px;
+}
+
+.hide{
+    display: none;
 }
