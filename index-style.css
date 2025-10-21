@@ -13,6 +13,9 @@
 
 
 .navbar{
+    /* position: fixed;
+    top: 0;
+    left: 0; */
     height: 60px;
     background-color: rgba(0, 0, 0, 0.2);
     
@@ -22,12 +25,83 @@
     align-items: center;
 }
 
-#menu{
+#menu-btn, #sidebar-menu-btn{
     margin-left: 10px;
     color: white;
 }
 
-#casino{
+.sidebar{
+    position: fixed;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 220px;
+    z-index: 1000;
+    background: linear-gradient(to bottom right, #374151, #9d4edd, #374151);
+    box-shadow: 0 5px 10px #8b5cf6, 0 0 5px #8b5cf6, 0 0 10px #8b5cf6;
+    padding: 20px 0px;
+    transition: all 0.4s ease;
+}
+
+.sidebar.open{
+    left: 0;
+}
+
+.sidebar-logo{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+}
+
+.list{
+    list-style: none;
+    
+}
+
+.nav-link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.nav-link:hover{
+     background-color: rgba(0, 0, 0, 0.2);
+}
+
+.icon{
+    margin-right: 14px;
+    font-size: 20px;
+    color: white;
+}
+
+.link{
+    font-size: 20px;
+    color: white;
+    font-weight: 400;
+    font: poppins;
+}
+
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    transition: all 0.4s ease;
+    pointer-events: none;
+    opacity: 0;
+}
+
+.overlay.open{
+    opacity: 1;
+    pointer-events: auto;
+}
+
+#casino-title, #sidebar-casino{
     width: 550px;
     font-weight: bold;
     font-size: 25px;
@@ -60,9 +134,10 @@
     color: white;
     background-color: rgba(88, 28, 135, 0.5);
 }
+
 /*-----------------------------------MIDDLE1---------------------*/
 .middle1{
-    height: 400px;
+    height: 200px;
     
     display: flex;
     flex-direction: column;
@@ -83,49 +158,6 @@
     font-size: 20px;
     margin-top: 5px;
     color: white;
-}
-
-.icons{
-    margin-top: 10px;
-    padding: 10px;
-    
-    display: flex;
-    justify-content: space-between;
-    width: 200px;
-}
-
-.icon-box1{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.icon-box2{
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.icon{
-    background-color: rgba(88, 28, 135, 0.5);
-    height: 50px;
-    width: 50px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 30px;
-    
-}
-
-.icon-text{
-    color: white;
-    margin-top: 8px;
 }
 
 /*----------------------------------MIDDLE2-------------------*/
