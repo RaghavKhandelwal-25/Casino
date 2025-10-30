@@ -46,3 +46,22 @@ ul,li{
     margin-left: 10px;
     line-height: 1.6;
 }
+
+a{
+    color: white;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    position:absolute;
+    left: 12px;
+    border: 1px solid;
+    border-color: rgba(126, 34, 206, 0.5);
+    padding: 5px 10px;
+    background-color: rgba(88, 28, 135, 0.5);
+}
+
+a:hover{
+    background-color: rgba(126, 34, 206, 0.5);
+    transition: 0.3s;
+    border: 1px solid white;
+}
