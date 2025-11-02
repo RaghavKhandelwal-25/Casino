@@ -7,6 +7,7 @@ let menu=document.querySelector('#menu-btn');
 let sidebar=document.querySelector('.sidebar');
 let overlay=document.querySelector('.overlay');
 let menuBtns=document.querySelectorAll('.nav-link');
+let playerMenu=document.querySelector('#player_menu');
 // let saviorBtn=document.querySelector('#savior');
 
 let balance=parseInt(localStorage.getItem('balance')) || 1000; //saving balance in local storage
@@ -80,6 +81,9 @@ overlay.addEventListener('click',()=>{
     overlay.classList.remove('open');
 });
 
+function toogleMenu(){
+    playerMenu.classList.toggle('open');
+}
 
 
 // saviorBtn.addEventListener('click',()=>{
