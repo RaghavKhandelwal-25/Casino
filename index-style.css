@@ -176,14 +176,16 @@
     text-align: left;
     margin: 0;          
     line-height: 1; 
-    font-weight: 500;    
+    font-weight: 500; 
+    background: none;
+    border: none;   
 }
 
 .player_item:hover{
     font-weight: 600;
 }
 
-.player_list button{
+.add_player{
     margin: 10px;
     padding: 8px;
     border: none;

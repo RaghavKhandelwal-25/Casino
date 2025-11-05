@@ -8,6 +8,8 @@ let sidebar=document.querySelector('.sidebar');
 let overlay=document.querySelector('.overlay');
 let menuBtns=document.querySelectorAll('.nav-link');
 let playerMenu=document.querySelector('#player_menu');
+let changePlayer=document.querySelectorAll('.player_item');
+let currPlayer=document.querySelector('#curr-player');
 // let saviorBtn=document.querySelector('#savior');
 
 let balance=parseInt(localStorage.getItem('balance')) || 1000; //saving balance in local storage
@@ -17,6 +19,10 @@ balanceDisplay.innerText=balance;
 function updateBalance(newBalance) {
     balance = newBalance;
     balanceDisplay.innerText = balance;
+
+    players[0].balance = balance; //update current player's balance
+    localStorage.setItem('players', JSON.stringify(players));
+
     localStorage.setItem('balance', balance);
 }
 
@@ -84,6 +90,37 @@ overlay.addEventListener('click',()=>{
 function toogleMenu(){
     playerMenu.classList.toggle('open');
 }
+
+let players = JSON.parse(localStorage.getItem('players')) || [
+  { name: "Player 1", balance: 1000 },
+  { name: "Player 2", balance: 1000 },
+  { name: "Player 3", balance: 1000 }
+];
+
+currPlayer.innerText = players[0].name;
+updateBalance(players[0].balance);
+
+
+// Update currPlayer display
+changePlayer.forEach((item, index)=>{
+    item.addEventListener('click',()=>{
+        
+        let temp=players[0];
+        players[0]=players[index+1];
+        players[index+1]=temp;
+
+        currPlayer.innerText=players[0].name;
+        updateBalance(players[0].balance);
+
+        changePlayer.forEach((btn, i) => {
+        btn.textContent = players[i+1].name;
+        });
+
+        localStorage.setItem('players', JSON.stringify(players));
+    });
+});
+
+
 
 
 // saviorBtn.addEventListener('click',()=>{
